@@ -8,7 +8,6 @@ import './SalesAndExpences.scss';
 const SalesAndExpencesChart = (props) => {
 
 const {graphData}= props;
-console.log(graphData && graphData.map((year) => year[0]).filter((item,index) => index > 0))
 
 const dataALL = {
   labels: graphData && graphData.map((year,index) => year[0]).filter((item,index) => index > 0),
@@ -60,7 +59,7 @@ const dataALL = {
 };
 
   return (
-    <div className="container">
+    <div className="chart-block">
     <h2>Company Performance</h2>
        <Line data={dataALL} />
     </div>
